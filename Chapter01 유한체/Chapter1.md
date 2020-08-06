@@ -100,19 +100,29 @@ class FieldElement:
 >>> from FieldElement import FieldElement
 >>> a = FieldElement(7, 13)
 >>> b = FieldElement(6, 13)
-
+>>> print(a == b)
+False
+>>> print(a == a)
+True
 ```
 ### 연습문제 1.1
 FieldElement의 두 객체가 서로 다른지 검사하는 != 연산자를 재정의하도록 FieldElement 클래스의 __ne__ 메서드를 작성.
 <pre>
 <code>
     def __ne__(self, other):
-       if other is None:
-           return False
-       return self.num != other.num and self.prime != other.prime
+        if other is None:
+            print('other is none')
+            return False
+        return not(self == other)
 </code>
 </pre>
 
+```
+>>> print(a != b)
+True
+>>> print(a != a)
+False
+```
 # 1.4 나머지 연산
 나머지 연산을 이용해 덧셈, 뺄셈, 곱셈, 나눗셈에 대해 닫혀 있는 유한체를 만들 수 있음.
 ```

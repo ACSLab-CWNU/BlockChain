@@ -96,6 +96,23 @@ class FieldElement:
 > ➌ __eq__ 메서드는 FieldElement 클래스의 두 개체가 같은지 검사   
 > 객체의 num과 prime 속성이 서로 같은 경우에만 True 값을 반환
 
+```
+>>> from FieldElement import FieldElement
+>>> a = FieldElement(7, 13)
+>>> b = FieldElement(6, 13)
+
+```
+### 연습문제 1.1
+FieldElement의 두 객체가 서로 다른지 검사하는 != 연산자를 재정의하도록 FieldElement 클래스의 __ne__ 메서드를 작성.
+<pre>
+<code>
+    def __ne__(self, other):
+       if other is None:
+           return False
+       return self.num != other.num and self.prime != other.prime
+</code>
+</pre>
+
 # 1.4 나머지 연산
 나머지 연산을 이용해 덧셈, 뺄셈, 곱셈, 나눗셈에 대해 닫혀 있는 유한체를 만들 수 있음.
 ```
@@ -176,3 +193,5 @@ a-<sub>f</sub>b = (a-b)%p, (a, b ∊ F<sub>p</sub>)
 11-<sub>f</sub>9=(11-9)%19=2
 6-<sub>f</sub>13=(6-13)%19 = 12
 </pre>
+
+# 1.5.1 파이썬으로 유한체 덧셈과 뺄셈 

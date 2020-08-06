@@ -107,15 +107,13 @@ True
 ```
 ### 연습문제 1.1
 FieldElement의 두 객체가 서로 다른지 검사하는 != 연산자를 재정의하도록 FieldElement 클래스의 __ne__ 메서드를 작성.
-<pre>
-<code>
+```
     def __ne__(self, other):
         if other is None:
             print('other is none')
             return False
         return not(self == other)
-</code>
-</pre>
+```
 
 ```
 >>> print(a != b)
@@ -228,4 +226,34 @@ print((52-30-38)%prime)
 41
 </pre>
 
-# 1.5.1 파이썬으로 유한체 덧셈과 뺄셈 
+# 1.5.1 파이썬으로 유한체 덧셈과 뺄셈  코딩하기
+FieldElement 클래스에서 __add__와 __sub__ 메서드를 정의.
+```
+    def __add__(self, other):
+        if self.prime != other.prime: ➊
+            raise TypeError('Cannot add two numbers in different Fields')
+        num = (self.num + other.num) % self.prime ➋
+        return self.__class__(num, self.prime) ➌
+        
+➊ 더하는 수와 더해지는 수의 위수가 동일한지 확인. 서로 위수가 다르며7ㄴ 계산은 무의미함.
+➋ 나머지 연산을 통해 유한체 덧셈을 정의.
+➌ 자기 자신 클래스의 인스턴스를 반환.
+```
+```
+>>> from FieldElement import FieldElement
+>>> a = FieldElement(7, 13)
+>>> b = FieldElement(12, 13)
+>>> c = FieldElement(6, 13)
+>>> print(a+b==c)
+True
+```
+
+### 연습문제 1.3
+2개의 FieldElement 객체의 뺄셈을 정의하는 __sub__ 메서드를 작성.
+```
+    def __sub__(self, other):
+        if self.prime != other.prime: 
+            raise TypeError('Cannot add two numbers in different Fields')
+        num = (self.num - other.num) % self.prime 
+        return self.__class__(num, self.prime) 
+```

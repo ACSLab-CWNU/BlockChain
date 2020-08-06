@@ -136,7 +136,7 @@ a +<sub>f</sub> b ∊ F₁₉
 </code></pre>
 일반 정수에서의 덧셈과 구별하기 위해 +가 아닌 +<sub>f</sub>로 표시.
 
-<pre><code>
+<pre>
 유한체 덧셈 일반화 정의
 a +<sub>f</sub> b = (a + b)%p
 p는 위수. a, b ∊ F<sub>p</sub>
@@ -144,5 +144,5 @@ p는 위수. a, b ∊ F<sub>p</sub>
 19를 위수로 하는 유한체 F₁₉
 7 +<sub>f</sub> 8 = (7+8)%19 = 15
 11 +<sub>f</sub> 17 = (11+17)%19 = 9
-<code></pre>
+</pre>
 

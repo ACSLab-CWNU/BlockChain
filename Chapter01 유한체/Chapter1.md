@@ -208,32 +208,24 @@ a-<sub>f</sub>b = (a-b)%p, (a, b ∊ F<sub>p</sub>)
 유한체 F<sub>57</sub>에서 다음 연산의 결과를 구하시오.
 * 44 +<sub>f</sub> 33
 <pre>
-<code>
 >>> prime = 57
 >>> print((44+33)%prime)
 20
-</code>
 </pre>
 * 9 -<sub>f</sub> 29
 <pre>
-<code>
 >>> print((9-29)%prime)
 37
-</code>
 </pre>
 * 17 +<sub>f</sub> 42 +<sub>f</sub> 49
 <pre>
-<code>
 >>> print((17+42+49)%prime)
 51
-</code>
 </pre>
 * 52 -<sub>f</sub> 30 -<sub>f</sub> 38
 <pre>
-<code>
 print((52-30-38)%prime)
 41
-</code>
 </pre>
 
 # 1.5.1 파이썬으로 유한체 덧셈과 뺄셈 

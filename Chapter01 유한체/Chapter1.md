@@ -128,26 +128,25 @@ print(-27 % 13)
 19를 위수로 하는 유한체
 <pre>
 F₁₉ = {0, 1, 2, ... 18}
-</pre>
+</pre>   
    
 덧셈에 대해 닫혀있음 표기
 <pre>
 a +<sub>f</sub> b ∊ F₁₉
 </pre>
-일반 정수에서의 덧셈과 구별하기 위해 +가 아닌 +<sub>f</sub>로 표시.
+일반 정수에서의 덧셈과 구별하기 위해 +가 아닌 +<sub>f</sub>로 표시.   
    
 <pre>
 유한체 덧셈 일반화 정의
-a +<sub>f</sub> b = (a + b)%p
-</pre>
-p는 위수. a, b ∊ F<sub>p</sub>
-   
+a +<sub>f</sub> b = (a + b)%p, (p는 위수. a, b ∊ F<sub>p</sub>)
+</pre>   
+
 유한체 덧셈은 유한체에서 임의의 수 2개를 꺼내서 더하고 그 수를 위수로 나눈 나머지를 구함.   
 <pre>
 19를 위수로 하는 유한체 F₁₉
 7 +<sub>f</sub> 8 = (7+8)%19 = 15
 11 +<sub>f</sub> 17 = (11+17)%19 = 9
-</pre>
+</pre>   
    
 덧셈에 대한 역원도 동일한 방식으로 정의.   
 a ∊ F<sub>p</sub>이면 -<sub>f</sub>a ∊ F<sub>p</sub>가 성립.   
@@ -155,8 +154,8 @@ a ∊ F<sub>p</sub>이면 -<sub>f</sub>a ∊ F<sub>p</sub>가 성립.
 유한체 덧셈 역원 일반화 정의
 -<sub>f</sub>a = (-a) % p
 </pre>
-일반 정수에서의 뺄셈과 구별하기 위해 -가 아닌 -<sub>f</sub>로 표시.
-   
+일반 정수에서의 뺄셈과 구별하기 위해 -가 아닌 -<sub>f</sub>로 표시.   
+
 19를 위수로 하는 유한체 F₁₉에서
 <pre>
 -<sub>f</sub>9 = (-9)%19 = 10
@@ -171,7 +170,7 @@ a ∊ F<sub>p</sub>이면 -<sub>f</sub>a ∊ F<sub>p</sub>가 성립.
 <pre>
 a-<sub>f</sub>b = (a-b)%p
 </pre>
-a, b ∊ F<sub>p</sub>
+a, b ∊ F<sub>p</sub>   
    
 19를 위수로 하는 유한체 F₁₉에서
 <pre>

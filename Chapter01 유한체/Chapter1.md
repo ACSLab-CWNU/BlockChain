@@ -257,3 +257,34 @@ True
         num = (self.num - other.num) % self.prime 
         return self.__class__(num, self.prime) 
 ```
+# 1.6 유한체 곱셈과 거듭제곱
+유한체에서 닫혀 있는 덧셈(+<sub>f</sub>)을 새롭게 정의한것처럼 곱셈에 대해서도 정의.
+정수집합에서의 곱셈은 '여러번 더하기'를 의미
+```
+5 • 3 = 5 + 5 + 5 = 15
+8 • 17 = 8 + 8 + 8 + ... + 8 = 136
+```
+유한체에서 곱셈도 동일한 방법으로 계산 가능
+<pre>
+5 •<sub>f</sub> 3 = 5 +<sub>f</sub> 5 +<sub>f</sub> 5
+8 •<sub>f</sub> 17 = 8 +<sub>f</sub> 8 +<sub>f</sub> 8 +<sub>f</sub> ... +<sub>f</sub> 8
+</pre>
+
+위수가 19인 유한체 F<sub>19</sub>에서
+<pre>
+5 •<sub>f</sub> 3 = 5 +<sub>f</sub> 5 +<sub>f</sub> 5 = 15 % 19 = 15
+8 •<sub>f</sub> 17 = 8 +<sub>f</sub> 8 +<sub>f</sub> 8 +<sub>f</sub> ... +<sub>f</sub> 8 = (8•17) % 19 = 3
+</pre>
+계산은 정수집합의 곱셈을 유한체의 위수로 나눈 나머지와 동일하며, 결과는 F<sub>19</sub>에 속함.   
+즉, 결과는 항상 집합 {0, 1, ..p-1}에 속함.   
+   
+거듭제곱은 한 숫자를 '여러번 곱하기'를 의미
+<pre>
+7<sup>3</sup> = 7 • 7 • 7 = 343
+</pre>
+
+위수가 19인 유한체 F<sub>19</sub>에서
+<pre>
+7<sup>3</sup> = 343 % 19 = 1
+9<sup>12</sup> = 7
+</pre>

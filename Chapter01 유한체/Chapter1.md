@@ -204,4 +204,11 @@ a-<sub>f</sub>b = (a-b)%p, (a, b ∊ F<sub>p</sub>)
 6-<sub>f</sub>13=(6-13)%19 = 12
 </pre>
 
+### 연습문제 1.2
+유한체 F<sub>57</sub>에서 다음 연산의 결과를 구하시오.
+* 44 +<sub>f</sub> 33
+* 9 -<sub>f</sub> 29
+* 17 +<sub>f</sub> 42 +<sub>f</sub> 49
+* 52 -<sub>f</sub> 30 -<sub>f</sub> 38
+
 # 1.5.1 파이썬으로 유한체 덧셈과 뺄셈 

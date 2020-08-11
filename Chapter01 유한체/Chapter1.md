@@ -351,3 +351,22 @@ FieldElement 클래스에서 __mul__ 메서드를 정의
 >>> print(a*b==c)
 True
 ```
+## 1.6.2 파이썬으로 거듭제곱 코딩하기
+FielElement 클래스에서 __pow__ 메서드를 정의
+```
+    def __pow__(self, exponent):
+        num = self.num ** exponent) % self.prime ➊
+        return self.__class__(num, self.prime) ➋
+```
+```
+>>> from ecc import FieldElement
+>>> a = FieldElement(3, 13)
+>>> b = FieldElement(1, 13)
+>>> print(a**3==b)
+True
+```
+지수가 유한체 원소일 경우 지수 관련 성질 (예 7<sup>a</sup> • 7<sup>b</sup> = 7<sup>a+b</sup>)이 성립하지 않으므로 지수는 유한체로 한정하지 않음.
+
+### 연습문제 1.7
+7, 11, 17, 31인 p값에 대해 유한체 F<sub>p</sub>에서 다음 집합을 구하시오.
+* {1<sup>(p-1)</sup>, 2<sup>(p-1)</sup>, 3<sup>(p-1)</sup>, 4<sup>(p-1)</sup>, ... (p-1)<sup>(p-1)</sup>}
